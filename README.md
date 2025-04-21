@@ -2,7 +2,7 @@ local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/Sc-
 
 
 local Window = OrionLib:MakeWindow({
-    Name = "MATRIX HUB V2🎩",
+    Name = "MATRIX HUB V2.0🎩|ERA DE ATAQUES",
     HidePremium = false,
     SaveConfig = true,
     ConfigFolder = "Pb",
