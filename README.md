@@ -1069,26 +1069,7 @@ local Tab = Window:MakeTab({
 Tab:AddButton({
 	Name = "SOUND ALL",
 	Callback = function()
-      	loadstring(game:HttpGet("https://rawscripts.net/raw/Infinite-Yield_500"))()
-	print("button pressed")
-  	end    
-})
-
-local Tab = Window:MakeTab({
-	Name = "BLACK HOLE🕳",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
-
---[[
-Name = <string> - The name of the tab.
-Icon = <string> - The icon of the tab.
-PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
-
-Tab:AddButton({
-	Name = "BLACK HOLE",
-	Callback = function()
-        loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-FE-black-hole-18879"))() 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ameicaa0/brookhaven/refs/heads/main/brookhaven%20script.txt"))()
 	print("button pressed")
   	end    
 })
