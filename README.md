@@ -115,51 +115,6 @@ end
 end
 })
 
-local Tab = Window:MakeTab({
-	Name = "LAG SERVER BETA🚨",
-	Icon = "rbxassetid://10734898355",
-	PremiumOnly = false
-})
-
---Ball
-
-local player = game.Players.LocalPlayer
-local backpack = player:WaitForChild("Backpack")
-
-local itemToDuplicate = backpack:FindFirstChild("Basketball") -- Nome do item
-
-if itemToDuplicate then
-    local clonedItem = itemToDuplicate:Clone() -- Clonar o item
-    clonedItem.Parent = backpack -- Colocar o clone no inventário
-    print("Item duplicado!")
-else
-    print("Item não encontrado no inventário.")
-end
-  	end    
-})
-
-local toggleActive = false
-local function loopBall()
-while toggleActive do
-local args = {
-    [1] = Vector3.new(-30.919673919677734, 0.02500009536743164, 190.3595733642578)
-}
-
-game:GetService("Players").LocalPlayer.Character.Basketball.ClickEvent:FireServer(unpack(args))
-wait(1) -- intervalo de 1 segundo entre cada repetição
-end
-end
-
-Tab:AddToggle({
-Name = "loop Ball",
-Default = false,
-Callback = function(value)
-toggleActive = value
-if toggleActive then
-loopBall()
-end
-end
-})
 
 local Tab = Window:MakeTab({
 	Name = "Matar",
