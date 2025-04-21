@@ -1058,19 +1058,4 @@ local Tab = Window:MakeTab({
 	PremiumOnly = false
  })
 
-
-local Tab = Window:MakeTab({
-	Name = "SOUND ALL🚨",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
- })
-
- 
-Tab:AddButton({
-	Name = "SOUND ALL",
-	Callback = function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/ameicaa0/brookhaven/refs/heads/main/brookhaven%20script.txt"))()
-	print("button pressed")
-  	end    
-})
 OrionLib:Init() 
