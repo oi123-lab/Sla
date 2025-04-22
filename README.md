@@ -5,7 +5,7 @@ local Window = OrionLib:MakeWindow({
     Name = "MATRIX HUB V2.0🎩|ERA DE ATAQUES",
     HidePremium = false,
     SaveConfig = true,
-    ConfigFolder = "Pb",
+    ConfigFolder = "OrionTest",
     IntroText = "Team Cartola Center🎩"
 })
 
@@ -1012,4 +1012,4 @@ local Tab = Window:MakeTab({
 	PremiumOnly = false
  })
 
-OrionLib:Init() 
+OrionLib:Init()
