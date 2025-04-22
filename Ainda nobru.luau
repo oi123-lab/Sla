@@ -1,17 +1,65 @@
 -- Carregar a biblioteca Orion
-local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/jensonhirst/Orion/main/source')))()
+local OrionLib = https://raw.githubusercontent.com/Sc-Rhyan57/ThisSxHub/refs/heads/main/Library/OrionLibrary.lua
 
--- Configurações do Hub
 local Window = OrionLib:MakeWindow({
-    Name = "MATRIX HUB🎩|BY NOT LEGITTY,MINI PUMPKIN",
-    HidePremium = false,
-    SaveConfig = true,
-    ConfigFolder = "LeitonhoHubConfig",
-    IntroText = "Bem-vindo ao MATRIX HUB🎩",
+    Name = "MATRIX HUB🎩|by CARTOLA CENTER🎩",
+    HidePremium = false, 
+    SaveConfig = true, 
+    ConfigFolder = "PBHubConfigs",
     IntroEnabled = true,
-    Theme = {
-        MainColor = Color3.fromRGB(255, 0, 0) -- Cinza
-    }
+    IntroText = "Team CARTOLA CENTER🎩",
+    IntroIcon = "rbxassetid://86898373680592",
+    Icon = "rbxassetid://86898373680592",
+    CloseCallback = function() 
+        print("PB hub fechado")
+    end
+})
+
+
+local ScreenGui = Instance.new("ScreenGui")
+ScreenGui.Name = "ScreenGui"
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ResetOnSpawn = false
+
+local Toggle = Instance.new("ImageButton")
+Toggle.Name = "Toggle"
+Toggle.Parent = ScreenGui
+Toggle.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Toggle.BackgroundTransparency = 0.5
+Toggle.Position = UDim2.new(0, 0, 0.454706937, 0)
+Toggle.Size = UDim2.new(0, 50, 0, 50)
+Toggle.Image = "rbxassetid://86898373680592"
+Toggle.Draggable = true
+
+local Corner = Instance.new("UICorner")
+Corner.CornerRadius = UDim.new(0.1, 0)
+Corner.Parent = Toggle
+
+local isOn = false
+local selectedPlayerName = nil
+
+local function onButtonClicked()
+    if gethui():FindFirstChild("Orion") then
+        gethui().Orion.Enabled = not gethui().Orion.Enabled
+    end
+end
+
+local function offButtonClicked()
+    if gethui():FindFirstChild("Orion") then
+        gethui().Orion.Enabled = not gethui().Orion.Enabled
+    end
+end
+
+Toggle.MouseButton1Click:Connect(function()
+    isOn = not isOn
+    if isOn then
+        Toggle.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+        onButtonClicked()
+    else
+        Toggle.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+        offButtonClicked()
+    end
+end)
 })
 local Tab = Window:MakeTab({
 	Name = "pegar sofa",
