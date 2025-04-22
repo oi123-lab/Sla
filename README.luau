@@ -1,36 +1,18 @@
-local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/Kiwilegazin/Orion-mobile-v2/refs/heads/main/README.md')))()
-local Window = OrionLib:MakeWindow({Name = "MATRIX HUB🎩|ERA DE ATAQUES🎩|BY TEAM CARTOLA CENTER🎩", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+-- Carregar a biblioteca Orion
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/jensonhirst/Orion/main/source')))()
 
---[[
-Name = <string> - The name of the UI.
-HidePremium = <bool> - Whether or not the user details shows Premium status or not.
-SaveConfig = <bool> - Toggles the config saving in the UI.
-ConfigFolder = <string> - The name of the folder where the configs are saved.
-IntroEnabled = <bool> - Whether or not to show the intro animation.
-IntroText = <string> - Text to show in the intro animation.
-IntroIcon = <string> - URL to the image you want to use in the intro animation.
-Icon = <string> - URL to the image you want displayed on the window.
-CloseCallback = <function> - Function to execute when the window is closed.
-]]
-
-local Tab = Window:MakeTab({
-	Name = "Bem vindo",
-	Icon = "rbxassetid://10734898355",
-	PremiumOnly = false
+-- Configurações do Hub
+local Window = OrionLib:MakeWindow({
+    Name = "MATRIX HUB🎩|BY NOT LEGITTY,MINI PUMPKIN",
+    HidePremium = false,
+    SaveConfig = true,
+    ConfigFolder = "LeitonhoHubConfig",
+    IntroText = "Bem-vindo ao MATRIX HUB🎩",
+    IntroEnabled = true,
+    Theme = {
+        MainColor = Color3.fromRGB(255, 0, 0) -- Cinza
+    }
 })
-
-
-Tab:AddParagraph("BEM-VINDO MEU NOBRE ESTAMOS NA ERA DE ATAQUES🎩,PRA VOCE QUE NÃO SABE OQ E ERA DE ATAQUES E A ERA QUE NOS MAIS ATACAMOS MANDRAKES","")
-
-
-Tab:AddButton({
-	Name = "Infinity Yield(Obrigatório)",
-	Callback = function()
-      	loadstring(game:HttpGet("https://rawscripts.net/raw/Infinite-Yield_500"))()
-	print("button pressed")
-  	end    
-})
-
 local Tab = Window:MakeTab({
 	Name = "pegar sofa",
 	Icon = "rbxassetid://4483345998",
@@ -57,46 +39,75 @@ game:GetService("ReplicatedStorage").RE:FindFirstChild("1Too1l"):InvokeServer(un
 })
 
 local Tab = Window:MakeTab({
-Name = "House",
-Icon = "rbxassetid://10734898355",
-PremiumOnly = false
+    Name = "Casas",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
 })
 
+local a = 0
 
-local casaNumbers = {}
-for i = 1, 35 do
-if i ~= 8 and i ~= 9 and i ~= 10 then
-table.insert(casaNumbers, tostring(i))
-end
-end
-
-local selectedCasaNumber = nil
-
-Tab:AddDropdown({
-Name = "Escolha o número da casa",
-Options = casaNumbers,
-Callback = function(number)
-selectedCasaNumber = tonumber(number)
-end
+Tab:AddTextbox({
+    Name = "Numero",
+    Default = "11",
+    TextDisappear = true,
+    Callback = function(Value)
+        a = tonumber(Value) or 0  -- Converte o valor para nÃƒÂºmero ou define como 0 se nÃƒÂ£o for um nÃƒÂºmero vÃƒÂ¡lido
+    end      
 })
 
 Tab:AddButton({
-Name = "Pegar Permissão",
-Callback = function()
-if selectedCasaNumber then
-local args = {
-[1] = "GivePermissionLoopToServer",
-[2] = game:GetService("Players").LocalPlayer,
-[3] = selectedCasaNumber
-}
-game:GetService("ReplicatedStorage").RE:FindFirstChild("1Playe1rTrigge1rEven1t"):FireServer(unpack(args))
+    Name = "pegar permissao",
+    Callback = function()
+        local args = {
+            "GivePermissionLoopToServer",
+            game.Players.LocalPlayer,
+            a
+        }
 
-else
-print("Nenhum número de casa selecionado.")
-end
-end
+        game:GetService("ReplicatedStorage").RE:FindFirstChild("1Playe1rTrigge1rEven1t"):FireServer(unpack(args))
+    end    
 })
 
+local Tab = Window:MakeTab({
+	Name = "Scripts universais",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+--[[
+Name = <string> - The name of the tab.
+Icon = <string> - The icon of the tab.
+PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
+]]
+
+Tab:AddButton({
+	Name = "infinite yield",
+	Callback = function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+      		print("button pressed")
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+
+
+Tab:AddButton({
+	Name = "Nameles Loopfling",
+	Callback = function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source"))()
+      		print("button pressed")
+  	end  
+  
+})Tab:AddButton({
+	Name = "fly v3",
+	Callback = function()
+	loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Fly-v3-7412"))()
+      		print("button pressed")
+  	end 
+  })
 
 -- Iniciar a interface
 OrionLib:Init()
