@@ -1,5 +1,5 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/Kiwilegazin/Orion-mobile-v2/refs/heads/main/README.md')))()
-local Window = OrionLib:MakeWindow({Name = "MATRIX HUB🎩🕳👾|", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "MATRIX HUB🎩|ERA DE ATAQUES🎩|BY TEAM CARTOLA CENTER🎩", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
 --[[
 Name = <string> - The name of the UI.
@@ -20,7 +20,7 @@ local Tab = Window:MakeTab({
 })
 
 
-Tab:AddParagraph("BEM-VINDO MEU NOBRE ESTAMOS NA ERA DE ATAQUES🎩","")
+Tab:AddParagraph("BEM-VINDO MEU NOBRE ESTAMOS NA ERA DE ATAQUES🎩,PRA VOCE QUE NÃO SABE OQ E ERA DE ATAQUES E A ERA QUE NOS MAIS ATACAMOS MANDRAKES","")
 
 
 Tab:AddButton({
