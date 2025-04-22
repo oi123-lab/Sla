@@ -1,8 +1,8 @@
 -- Carregar a biblioteca Orion
-local OrionLib = https://raw.githubusercontent.com/Sc-Rhyan57/ThisSxHub/refs/heads/main/Library/OrionLibrary.lua
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/Kiwilegazin/Orion-mobile-v2/refs/heads/main/README.md')))()
 
 local Window = OrionLib:MakeWindow({
-    Name = "MATRIX HUB🎩|by CARTOLA CENTER🎩",
+    Name = "MATRIX HUB🎩|by CARTOLA CENTER🎩|PROIBIDO MANDRAKES CNPS TOXICOS E PATYS",
     HidePremium = false, 
     SaveConfig = true, 
     ConfigFolder = "PBHubConfigs",
