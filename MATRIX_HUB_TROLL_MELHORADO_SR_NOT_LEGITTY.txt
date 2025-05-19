@@ -1,7 +1,3 @@
--- MATRIX HUB ABA TROLL MELHORADO POR Sr Not Legitty
--- Bola 100% centralizada no Fling Ball
--- Gerado em 19/05/2025 18:23
-
 -- Intro GUI
 local introGui = Instance.new("ScreenGui")
 introGui.Name = "IntroGUI"
@@ -53,7 +49,7 @@ Window:AddMinimizeButton({
 
 local Tab1 = Window:MakeTab({"Home", "rbxassetid://138700382840270"})
 
-local Section = Tab1:AddSection("Créditos: Matrix COMMUNITY")
+local Section = Tab1:AddSection("Créditos: Matrix COMMUNITY,E Shelby")
 
 Tab1:AddParagraph({"🔧 Interface Reformulada: Nova estrutura visual com foco em eficiência e organização."})
 Tab1:AddParagraph({"⚙️ HUB ATUALIZADA COM NOVAS FUNCIONALIDADES INOVADORAS."})
@@ -62,9 +58,9 @@ Tab1:AddParagraph({"✅ Estabilidade Aprimorada: Menor chance de falhas e respos
 local playerName = game.Players.LocalPlayer.Name
 Tab1:AddParagraph({"Olá, " .. playerName .. "! ☄ Seja bem-vindo ao MATRIX HUB🎩. Aproveite com responsabilidade e Cuidado."})
 
-local Tab2 = Window:MakeTab({"Troll", "rbxassetid://10734934585"})
+local Tab2 = Window:MakeTab({"Troll", "Skull"})
 
-local Section = Tab2:AddSection({"Troll v5 By Not legitty"})
+local Section = Tab2:AddSection({"Troll Area By Not legitty,By Shelby"})
 
 local Players = game:GetService("Players")
 local TweenService = game:GetService("TweenService")
@@ -206,7 +202,7 @@ end)
 
 -- Adicionando o Dropdown para seleção de jogador
 Dropdown = Tab2:AddDropdown({
-    Name = "Selecione o O Player Para view,fling,etc.",
+    Name = "Selecione o Player.",
     Options = playerNames,
     Default = {},
     MultiSelect = false,
@@ -282,7 +278,7 @@ Tab2:AddButton({
 	end
 })
 
-local Section = Tab2:AddSection({"<Combate Com Bola⚽️-"})
+local Section = Tab2:AddSection({"<Combat Ball Area⚽️-"})
 
 -- Serviços
 local Players = game:GetService("Players")
@@ -388,7 +384,7 @@ end
 
 -- Botão que ativa o Fling com base no alvo selecionado
 Tab2:AddButton({
-	Name = "Fling Ball v3",
+	Name = "Fling Ball",
 	Callback = function()
 		if getgenv().Target then
 			setupBall()
@@ -398,7 +394,7 @@ Tab2:AddButton({
 	end
 })
 
-local Section = Tab2:AddSection({"<Combate Com  Sofá-"})
+local Section = Tab2:AddSection({"<Combat Couch Area🛋-"})
 
 local Players = game:GetService("Players")
 local Player = Players.LocalPlayer
@@ -604,7 +600,7 @@ SFBasePart(TRootPart)
 end
 
 Tab2:AddButton({
-    Name = "Fling - V18",
+    Name = "Fling Couch",
     Callback = function()
         if getgenv().Target then
             local TargetPlayer = GetPlayer(getgenv().Target)
@@ -616,7 +612,7 @@ Tab2:AddButton({
 })
 
 
-local Section = Tab2:AddSection({"<Combate  Com Veículo-"})
+local Section = Tab2:AddSection({"<Combat Vehicle Area🚗-"})
 
 Tab2:AddButton({
     Name = " Bus - Fling",
@@ -1125,7 +1121,7 @@ Tab2:AddButton({
     end
 })
 
-local Section = Tab2:AddSection({"<Combate Em All-"})
+local Section = Tab2:AddSection({"<Combat All Area💀-"})
 
 Tab2:AddButton({
     Name = "Press! Bus - Fling All",
